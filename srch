@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if [ $# -ne 2 ]; then
+	echo "USAGE:  srch {base_dir} {pattern}"
+	exit
+fi
+
+find $1 -name '.svn' -prune -o ! \( -name "*.swp" -o -name "*.pyc" \)  -print | xargs grep -ils "$2"
+

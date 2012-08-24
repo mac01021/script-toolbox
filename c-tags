@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if [ $# -ne 1 ]; then
+	echo "USAGE:  make-tags {pkg_dir}"
+	exit
+fi
+
+find $1 -name \*.py | xargs ctags
+

@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if [ $# -ne 1 ]; then
+	echo "USAGE:  clean-pyc {pkg_dir}"
+	exit
+fi
+
+find $1 -name \*.pyc | xargs rm
+

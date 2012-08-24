@@ -1,0 +1,3 @@
+
+gvim -c "ConqueTerm bash"
+

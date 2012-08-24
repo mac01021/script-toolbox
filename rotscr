@@ -1,0 +1,15 @@
+xsetwacom get 9 Rotate;
+if [ `xsetwacom get 9 Rotate` == none ] ; then
+    echo Rotating...;
+    xsetwacom set 9 Rotate 1;
+    xsetwacom set 10 Rotate 1;
+    xsetwacom set 15 Rotate 1;
+    xsetwacom get 9 Rotate;
+else
+    echo Unrotating...;
+    xsetwacom set 9 Rotate 0;
+    xsetwacom set 10 Rotate 0;
+    xsetwacom set 15 Rotate 0;
+    xsetwacom get 9 Rotate;
+fi
+
